@@ -1,11 +1,13 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 
-export const ListItem = ({ title }) => {
+
+export const ListItem = ({ title, onPress }) => {
     return (
-        <View style={styles.container}>
+        <TouchableOpacity 
+        onPress={onPress} style={styles.container}>
             <Text style={styles.text}>{title}</Text>
-        </View>
+        </TouchableOpacity>
     )
 }
 
