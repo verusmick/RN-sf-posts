@@ -1,10 +1,16 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
-export const Detail = () => {
+export const Detail = ({ navigation }) => {
+    const body = navigation.getParam('body');
+    const title = navigation.getParam('title');
+    const name = navigation.getParam('name');
+    console.log(body);
     return (
         <View style={styles.container}>
-            <Text>Detail</Text>            
+            <Text>{name}</Text>
+            <Text>{title}</Text>
+            <Text>{body}</Text>            
         </View>
     )
 }

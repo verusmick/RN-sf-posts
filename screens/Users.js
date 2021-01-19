@@ -28,7 +28,7 @@ export const Users = ({ navigation }) => {
                         keyExtractor={x => String(x.id)}
                         renderItem={({ item }) =>
                             <ListItem
-                                onPress={() => navigation.navigate('Posts', { user_id: item.id })}
+                                onPress={() => navigation.navigate('Posts', { user_id: item.id, name: item.name })}
                                 title={item.name}
                             />}
                     />
